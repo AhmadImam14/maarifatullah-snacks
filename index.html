@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maarifatullah Snacks</title>
+  <link rel="icon" href="images/icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <img src="images/logo.png" class="logo" alt="Logo">
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Menu</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button onclick="toggleDarkMode()" class="mode-btn">🌓</button>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img src="images/hero.png" class="hero-image" alt="Hero Image">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Fresh Homemade Snacks</h1>
+    <p>Instagram-style snacks delivered fast in Kano</p>
+    <a href="#products" class="btn">Order Now</a>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2 class="fade">Our Menu</h2>
+
+  <div class="grid">
+
+    <div class="card fade">
+      <img src="images/coconut.PNG">
+      <h3>Coconut Drink</h3>
+      <p>Soft sweet Juice</p>
+      <div class="row">
+        <span>₦1500</span>
+        <div class="qty">
+          <button onclick="changeQty('Puff Puff',1500,-1)">-</button>
+          <span id="qty-Puff Puff">0</span>
+          <button onclick="changeQty('Puff Puff',1500,1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade">
+      <img src="images/cookie.jpeg">
+      <h3>Cookie</h3>
+      <p>Crispy triangle delight</p>
+      <div class="row">
+        <span>₦2000</span>
+        <div class="qty">
+          <button onclick="changeQty('Samosa',2000,-1)">-</button>
+          <span id="qty-Samosa">0</span>
+          <button onclick="changeQty('Samosa',2000,1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade">
+      <img src="images/gireba.jpg">
+      <h3>Gireba</h3>
+      <p>Crunchy filling</p>
+      <div class="row">
+        <span>₦2500</span>
+        <div class="qty">
+          <button onclick="changeQty('Spring Roll',2500,-1)">-</button>
+          <span id="qty-Spring Roll">0</span>
+          <button onclick="changeQty('Spring Roll',2500,1)">+</button>
+        </div>
+      </div>
+    </div>
+
+        <div class="card fade">
+      <img src="images/cupcakes.png">
+      <h3>Cupcakes</h3>
+      <p>Crispy shaped delights</p>
+      <div class="row">
+        <span>₦1000/4</span>
+        <div class="qty">
+          <button onclick="changeQty('Cupcake',1000,-1)">-</button>
+          <span id="qty-Cupcake">0</span>
+          <button onclick="changeQty('Cupcake',1000,1)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about fade">
+  <h2>About Us</h2>
+  <p>Premium homemade snacks with fast delivery in Kano.</p>
+</section>
+
+<!-- FLOATING CART -->
+<div class="cart" onclick="toggleCart()">
+  🛒 <span id="cart-count-2">0</span>
+</div>
+
+<!-- CART DRAWER -->
+<div id="cart-panel" class="cart-panel">
+
+  <h2>Your Cart</h2>
+
+  <div id="cart-items"></div>
+
+  <h3>Total: ₦<span id="cart-total">0</span></h3>
+
+  <button onclick="checkout()" class="checkout">
+    Checkout on WhatsApp
+  </button>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer fade" >
+  <p>© 2026 Maarifatullah Snacks</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
