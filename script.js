@@ -62,7 +62,7 @@ function checkout(){
 
   msg += `%0ATotal: ₦${total}`;
 
-  window.open("https://wa.me/2349126672440?text=" + msg, "_blank");
+  window.open("https://wa.me/2347032515203?text=" + msg, "_blank");
 }
 
 // DARK MODE
